@@ -4,6 +4,8 @@ package output
 type Kafka2 struct {
 	// The list of all seed brokers, with their host and port information. Default: localhost:9092
 	Brokers *string `json:"brokers,omitempty"`
+	// The field name for the target topic.
+	Topic *string `json:"topic,omitempty"`
 	// The field name for the target topic. If the field value is app, this plugin writes events to the app topic.
 	TopicKey *string `json:"topicKey,omitempty"`
 	// The name of the default topic. (default: nil)
